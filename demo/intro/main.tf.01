@@ -9,5 +9,6 @@ resource "azurerm_resource_group" "tfrg1" {
   tags = {
     "owner"   = "Ravikanth C"
     "purpose" = "tf-demo"
+    "project" = "terraformdemo"
   }
 }

@@ -13,13 +13,22 @@ provider "azure" {
   environment = "public"
 }
 
+variable "rg_location" {
+  description = "test resoruce group"
+}
+
+variable "rg_purpose" {
+  description = "purpose of resoruce group"
+  default = "tf-demo"
+}
+
 resource "azurerm_resource_group" "tfrg" {
-  name     = "tfrg"
+  name     = var.rg_location
   location = "West Europe"
 
   tags = {
     "owner"   = "Ravikanth C"
-    "purpose" = "tf-demo3"
+    "purpose" = var.rg_purpose
   }
 }
 

@@ -1,0 +1,5 @@
+
+*.exe
+*.json
+demo/intro/.terraform/modules/staticweb/
+presentation/~$IaCTerraformFundamentals.pptx
